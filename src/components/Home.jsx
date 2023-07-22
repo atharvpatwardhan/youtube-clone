@@ -36,7 +36,7 @@ export const Home = ({videos,setVideos,searchTerm,setSearchTerm}) => {
         <div className='hidden md:flex md:ml-52 my-5 mr-5'>
           {
             Abovecategories.map((c)=>(
-              <div className='bg-neutral-100 cursor-pointer hover:bg-neutral-300 transition duration-300 text-md mx-auto py-1 px-3 rounded-xl' onClick={()=>{setSearchTerm(c.title);navigate(`/search/${searchTerm}`)}}>
+              <div className='bg-neutral-100 cursor-pointer hover:bg-neutral-300 transition duration-300 text-md mx-auto py-1 px-3 rounded-xl' onClick={()=>{setSearchTerm(c.title);navigate(`/search/${c.title}`)}}>
                 <p>{c.title}</p>
               </div>
             ))
