@@ -20,7 +20,7 @@ export const Home = ({videos,setVideos,searchTerm,setSearchTerm}) => {
 
     fetchData(`search?part=snippet&q=New`)
     .then((data)=>setVideos(data.items))
-  },[]);
+  },[setVideos]);
 
   const navigate = useNavigate();
 
