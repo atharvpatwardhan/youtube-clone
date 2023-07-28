@@ -60,7 +60,7 @@ export const SearchResults = ({videos,setVideos,searchTerm}) => {
                 <div className='w-[80%] flex gap-5'>
                   <img className='rounded-xl cursor-pointer hover:rounded-none hover:transition hover:duration-500 h-56 w-96' src={video?.snippet.thumbnails.medium.url} alt="Thumbnail" onClick={()=>navigate(`/video/${video.id.videoId}`)} />
                   <div className="">
-                    <a className='text-2xl cursor-pointer' href={`/video/${video.id.videoId}`} rel="noopener noreferrer" onClick={()=>navigate(`/video/${video.id.videoId}`)}>
+                    <h1 className='text-2xl cursor-pointer' onClick={()=>navigate(`/video/${video.id.videoId}`)}>
                       {
                           video?.snippet.title.length > 50
                           ?
@@ -68,9 +68,9 @@ export const SearchResults = ({videos,setVideos,searchTerm}) => {
                           :
                           video?.snippet.title.slice(0,50)
                       }
-                    </a>
+                    </h1>
                   <div className="cursor-pointer my-1" onClick={()=>navigate(`/channel/${video?.snippet.channelId}`)}>
-                    <a href={`/channel/${video?.snippet.channelId}`} rel="noopener noreferrer">{video?.snippet.channelTitle}</a>
+                    <h1 onClick={()=>navigate(`/channel/${video?.snippet.channelId}`)}>{video?.snippet.channelTitle}</h1>
                   </div>
                   <div>
                     <p>{video?.snippet.description}</p>
